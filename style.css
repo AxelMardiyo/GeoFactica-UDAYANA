@@ -11,16 +11,8 @@
     padding: 0;
 }
 
-body {
-    box-sizing: border-box;
-}
-
 .header {
     padding: 0;
-}
-
-.banner {
-    height: 300px;
 }
 
 .navbar {
@@ -32,32 +24,29 @@ body {
     border-bottom: solid transparent 3px;
     transition: border-bottom-color 0.3s ease;
 }
+
 .nav-item:hover {
     border-bottom: solid var(--2) 3px;
 }
-
 .nav-item.active {
     border-bottom: solid var(--2) 3px;
 }
-
 .hero {
     background-image: url(images/banner.png);
     height: 450px;
     background-size: cover;
+    padding: 48px;
 }
-
 .hero-title {
     margin-top: 45px;
     color: var(--3);
     font-size: 3rem;
     font-weight: 700;
 }
-
 .hero-title span {
     color: var(--3);
     position: relative;
 }
-
 .hero-title span::before {
     content: "";
     height: 45px;
@@ -69,49 +58,39 @@ body {
     transform: translateY(-45%);
     animation: blink 0.7s infinite;
 }
-
 .hero-title span.stop-blinking::before {
     animation: none;
 }
-
-.hero-caption {
-    width: 700px;
-}
-
 @keyframes blink {
     50% {
         opacity: 0
     }
 }
-
 .daftar-isi {
     padding: 30px;
     background-color: var(--2);
 }
-
 .daftar-isi a {
     text-decoration: none;
 }
-
 .daftar-isi .cards {
     overflow: hidden;
     position: relative;
     box-sizing: border-box;
     border-radius: 10px;
+    height: 120px;
 }
-
 .daftar-isi .card:hover {
     background-color: black;
     color: white;
 }
-
 .daftar-isi .card {
     color: var(--2);
     position: relative;
     background-color: var(--3);
     transition-duration: .3s;
+    height: 120px;
 }
-
 .daftar-isi .card-bg {
     opacity: 0.1;
     position: absolute;
@@ -119,9 +98,7 @@ body {
     top: 0;
     width: 100%;
     height: auto;
-
 }
-
 .keajaiban-dunia {
     padding: 30px;
     background-color: var(--3);
@@ -129,12 +106,13 @@ body {
 }
 
 .keajaiban-dunia .cards-flip {
-    height: 350px;
+    height: 300px;
 }
 
 .keajaiban-dunia .card {
     transition: transform 1500ms;
     transform-style: preserve-3d;
+    border-radius: 0;
 }
 
 .keajaiban-dunia .card img {
@@ -144,7 +122,8 @@ body {
 
 .keajaiban-dunia .front,
 .keajaiban-dunia .back {
-    height: 350px;
+    border-radius: 0;
+    height: 300px;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     color: var(--3);
@@ -172,6 +151,14 @@ body {
     gap: 20px;
 }
 
+.keajaiban-dunia .back p {
+    font-size: 14px;
+}
+
+.keajaiban-dunia .back h1 {
+    font-size: 32px;
+}
+
 .makanan {
     padding: 30px;
     color: white;
@@ -179,6 +166,7 @@ body {
 }
 
 .makanan .card {
+    border-radius: 0;
     height: 300px;
     color: white;
     background-color: var(--3);
@@ -187,6 +175,7 @@ body {
 
 .makanan .card img {
     height: 200px;
+    border-radius: 0;
 }
 
 .budaya {
@@ -196,23 +185,35 @@ body {
 
 .budaya .card {
     background-color: var(--2);
+    border-radius: 0;
+    height: 300px;
+}
+
+.budaya .card img {
+    border-radius: 0;
+    height: 200px;
 }
 
 .faq {
-    padding: 30px;
-    background-color: var(--2);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: var(--3);
 }
 
 .sejarah {
     height: 700px;
-    background-color: var(--3);
+    background-color: var(--2);
     padding: 30px;
 }
 
 .sejarah .card {
-    background-color: var(--2);
-    color: var(--3);
+    background-color: var(--3);
+    color: var(--2);
     position: relative;
+}
+
+.sejarah .card-text {
+    font-size: 14px;
 }
 
 .sejarah .main {
@@ -220,7 +221,7 @@ body {
 }
 
 .sejarah .main img {
-    height: 330px;
+    height: 250px;
 }
 
 .sejarah .side-content {
@@ -241,4 +242,249 @@ body {
     position: absolute;
     bottom: 15px;
     right: 15px;
+}
+
+.toTop {
+    border: 0;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+}
+
+.toTop svg {
+    height: 50px;
+    width: 50px;
+}
+.navbar-collapse {
+    background-color: #22223b !important;
+    padding: 0 !important;
+    margin: 0;
+    width: 100%;
+}
+
+
+
+@media screen and (max-width: 992px) {
+    .hero {
+        height: 300px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .daftar-isi {
+        padding: 20px;
+        margin: 0;
+    }
+
+    .daftar-isi h1 {
+        font-size: 28px;
+    }
+
+    .daftar-isi .cards .card-body {
+        font-size: 12px;
+    }
+
+    .keajaiban-dunia {
+        padding: 20px;
+        height: 300px;
+    }
+
+    .keajaiban-dunia h1 {
+        font-size: 28px;
+    }
+
+    .keajaiban-dunia .front,
+    .keajaiban-dunia .back {
+        height: 250px;
+    }
+
+    .keajaiban-dunia .card img {
+        height: 150px;
+        border-radius: 0;
+    }
+
+    .keajaiban-dunia .front h5 {
+        font-size: 18px;
+    }
+
+    .keajaiban-dunia .back {
+        padding: 10px;
+    }
+
+    .keajaiban-dunia .back h1 {
+        font-size: 18px;
+        margin-bottom: -15px;
+        padding: 0;
+    }
+
+    .keajaiban-dunia .back p {
+        font-size: 12px;
+        text-align: left;
+    }
+
+    .makanan {
+        height: 300px;
+    }
+
+    .makanan h1 {
+        font-size: 28px;
+    }
+
+    .makanan .card {
+        height: 250px;
+    }
+
+    .makanan .card h5 {
+        font-size: 18px;
+    }
+
+    .budaya {
+        height: 300px;
+    }
+
+    .budaya h1 {
+        font-size: 28px;
+    }
+
+    .budaya .card {
+        height: 250px;
+    }
+
+    .budaya .card h5 {
+        font-size: 18px;
+    }
+
+    .sejarah {
+        height: 600px;
+    }
+
+    .sejarah .card-title {
+        font-size: 16px;
+    }
+
+    .sejarah .card-text {
+        font-size: 10px;
+    }
+
+    .sejarah .main {
+        height: 400px;
+    }
+
+    .sejarah .main img {
+        height: 150px;
+    }
+
+    .sejarah .side-content {
+        flex-direction: row;
+        box-sizing: border-box;
+        height: 192px;
+        max-height: 192px;
+    }
+
+    .sejarah .side-content img {
+        height: auto;
+        width: 40%;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: calc(0.25rem - 1px);
+    }
+
+    .sejarah .inner .btn {
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .sejarah .inner .btn {
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+    }
+
+    .sejarah .card-text span {
+        display: none;
+    }
+
+    .faq .accordion-button,
+    .faq .accordion-body {
+        font-size: 14px;
+    }
+
+
+}
+
+@media screen and (max-width: 480px) {
+    .hero {
+        padding: 10px;
+        height: 300px;
+    }
+
+    .hero-title {
+        color: var(--3);
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    .hero-title span {
+        color: var(--3);
+        position: relative;
+    }
+
+    .hero-title span::before {
+        content: "";
+        height: 45px;
+        width: 3px;
+        position: absolute;
+        top: 50%;
+        right: -8px;
+        background: var(--3);
+        transform: translateY(-45%);
+        animation: blink 0.7s infinite;
+    }
+
+    .hero-title span.stop-blinking::before {
+        animation: none;
+    }
+    .keajaiban-dunia {
+        height: 100%;
+    }
+    .keajaiban-dunia .text-end {
+        text-align: center !important;
+        margin-bottom: 20px;
+    }
+    .makanan {
+        height: 100%;
+    }
+    .makanan .cards {
+        margin: 20px 0;
+    }
+    .makanan .card img {
+        height: 170px;
+    }
+    .makanan .text-dark {
+        text-align: center !important;
+    }
+    .budaya {
+        height: 100%;
+    }
+    .budaya .cards {
+        margin: 20px 0;
+    }
+    .budaya .card img {
+        height: 170px;
+    }
+    .sejarah {
+        height: 100%;
+    }
+    .sejarah .card {
+        height: 100%;
+        padding: 0 !important;
+        padding-bottom: 10px;
+        margin: 0;
+    }
+    .sejarah .side .row .card {
+        height: 5000px !important;
+    }
+
 }

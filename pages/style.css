@@ -1,0 +1,126 @@
+:root {
+    --1: #9a8c98;
+    --2: #f2e9e4;
+    --3: #4a4e69;
+    --4: #52B788;
+    --5: #D8F3DC;
+}
+
+body {
+    background-color: var(--3);
+}
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.navbar {
+    background-color: #22223b;
+    height: 54px;
+}
+
+.nav-item {
+    border-bottom: solid transparent 3px;
+    transition: border-bottom-color 0.3s ease;
+}
+
+.nav-item:hover {
+    border-bottom: solid var(--2) 3px;
+}
+
+.nav-item.active {
+    border-bottom: solid var(--2) 3px;
+}
+
+.banner {
+    background-color: var(--3);
+}
+
+.cards-flip {
+    height: 290px;
+}
+
+.card {
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+}
+
+.card img {
+    height: 200px;
+    border-radius: 0;
+}
+
+.front,
+.back {
+    height: 290px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    color: var(--3);
+    background: var(--2);
+    box-shadow: 0 8px 32px 0 var(--3);
+    backdrop-filter: blur(30px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.cards-flip:hover>.card {
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
+
+.back {
+    transform: rotateY(180deg);
+    z-index: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    padding-top: 30px;
+    align-items: center;
+    position: absolute;
+    gap: 20px;
+}
+
+.multiple-card-slider {
+    background-color: var(--3);
+}
+
+.multiple-card-slider .carousel-inner {
+    padding: 1em;
+}
+
+.multiple-card-slider .carousel {
+    height: auto;
+}
+
+.multiple-card-slider .card {
+    margin: 0 0.5em;
+    height: 200px;
+    /* box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18); */
+    border: none;
+}
+
+.multiple-card-slider .carousel-control-prev,
+.multiple-card-slider .carousel-control-next {
+    /* background-color: #e1e1e1; */
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.sectionTwo {
+    background-color: var(--3);
+}
+.navbar-collapse {
+    background-color: #22223b !important;
+    padding: 0 !important;
+    margin: 0;
+    width: 100%;
+}
+
+
+

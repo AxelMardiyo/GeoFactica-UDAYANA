@@ -1,5 +1,9 @@
 const dynamicText = document.querySelector(".hero-title span");
-const words = [" Setiap Sudut Dunia.", " Segala Penjuru Dunia.", " Berbagai Penjuru Dunia."];
+const words = [
+  " Setiap Sudut Dunia.",
+  " Segala Penjuru Dunia.",
+  " Berbagai Penjuru Dunia.",
+];
 
 // Variables to track the position and deletion status of the word
 let wordIndex = 0;
@@ -29,4 +33,4 @@ const typeEffect = () => {
   }
 };
 
-typeEffect();
+typeEffect(); 
